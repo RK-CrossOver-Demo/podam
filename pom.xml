@@ -434,6 +434,11 @@
 			<id>eclipse</id>
 			<url>https://mvnrepository.com/artifact/org.eclipse.mylyn.github/org.eclipse.egit.github.core/</url>
 		</repository>
+		<repository>
+			<id>egit</id>
+			<name>Eclipse egit</name>
+			<url>https://repo.eclipse.org/content/repositories/egit-releases/</url>
+		</repository>
 	</repositories>	
 	<dependencies>
 		<dependency>
