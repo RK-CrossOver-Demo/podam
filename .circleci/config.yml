@@ -45,9 +45,8 @@ jobs:
       - run:
           name: test
           command: mvn integration-test
-      - store_artifacts:
-          path: test-results.xml
-          prefix: tests
+      - store_test_results:
+          path: /tmp/test-results
 
 workflows:
   version: 2
