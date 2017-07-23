@@ -36,10 +36,7 @@ jobs:
           paths:
             - ~/.m2
           key: v1-dependencies-{{ checksum "pom.xml" }}
-        
-      # run tests!
-      # - run: mvn integration-test
-	  
+        	  
   test1:
     docker:
       - image: circleci/openjdk:8-jdk
@@ -52,4 +49,6 @@ workflows:
   build_and_test:
     jobs:
       - build
-      - test1
+      - test1:
+          requires:
+            - build
