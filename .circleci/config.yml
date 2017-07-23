@@ -42,6 +42,7 @@ jobs:
       - image: circleci/openjdk:8-jdk
     steps:
       - checkout
+      - run: mkdir ~/test-results
       - run:
           name: test
           command: mvn integration-test
