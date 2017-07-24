@@ -45,7 +45,7 @@ jobs:
       - run: mkdir ~/test-results
       - run:
           name: test
-          command: mvn integration-test
+          command: mvn verify
       - store_test_results:
           path: ~/test-results
 
