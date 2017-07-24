@@ -55,7 +55,7 @@ public class PodamFactoryInjectionIntegrationTest
 		int intField = pojo.getIntField();
 		assertThat("The int field cannot be zero!", intField, not(equalTo(0)));
 		
-		assertThat("This test must fail", intField, equalTo(0));
+		//assertThat("This test must fail", intField, equalTo(0));
 
 		String stringField = pojo.getStringField();
 		assertThat("The string field cannot be null!", stringField, not(nullValue()));
