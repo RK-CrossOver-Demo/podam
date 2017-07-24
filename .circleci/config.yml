@@ -47,10 +47,7 @@ jobs:
           name: test
           command: mvn verify
       - store_test_results:
-          path: ~/test-results
-    post:
-      - mkdir -p $CIRCLE_TEST_REPORTS/junit/
-      - find . -type f -regex ".*/target/failsafe-reports/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
+          path: target/failsafe-reports
 
 workflows:
   version: 2
