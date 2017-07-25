@@ -42,10 +42,12 @@ jobs:
       - image: circleci/openjdk:8-jdk
     steps:
       - checkout
-      - run: mkdir ~/test-results
       - run:
-          name: test
+          name: Run tests
           command: mvn verify
+      - store_artifacts:
+          path: target/failsafe-reports
+          destination: integration_tests
       - store_test_results:
           path: target/failsafe-reports
 
